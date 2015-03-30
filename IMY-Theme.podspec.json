@@ -1,14 +1,14 @@
 {
-  "name": "IMY-Theme",
+  "name": "IMY_Theme",
   "version": "1.0",
   "summary": "支持换肤,目前测试过的支持UITabbarItem,UIButton,UIImageView,UILabel等",
   "description": "支持换肤,目前测试过的支持UITabbarItem,UIButton,UIImageView,UILabel等",
-  "homepage": "https://github.com/meiyoudev/IMY-Theme",
+  "homepage": "https://github.com/meiyoudev/IMY_Theme",
   "license": "MIT",
   "authors": {"Ivan": "dcty@qq.com"},
-  "source": {"git": "hhttps://github.com/meiyoudev/IMY-Theme.git"},
+  "source": {"git": "hhttps://github.com/meiyoudev/IMY_Theme.git"},
   "platforms": {"ios": "6.0"},
-  "source_files": "IMY-Theme/ThemeSupport/*.{h,m}",
+  "source_files": "IMY_Theme/ThemeSupport/*.{h,m}",
   "requires_arc": true,
   "dependencies": {
     "BlocksKit": [],

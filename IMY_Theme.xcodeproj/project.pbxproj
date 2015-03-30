@@ -25,7 +25,7 @@
 		22F63A48A014A827A2C4576F /* NSString+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F630C91CEAEF81A99D71CB /* NSString+IMY_Theme.m */; };
 		22F63A521C1D4929926F87A8 /* all_bottommeetyou@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F6380E201916D8D0AF46CC /* all_bottommeetyou@3x.png */; };
 		22F63AB874CEE764CB7352BD /* NSObject+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F636DE6EC1202D2A8C1E1F /* NSObject+IMY_Theme.m */; };
-		22F63ACC87E0B99FEFC236A4 /* IMY-Theme.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 22F63029660E3887D3E038B9 /* IMY-Theme.podspec.json */; };
+		22F63ACC87E0B99FEFC236A4 /* IMY_Theme.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = 22F63029660E3887D3E038B9 /* IMY_Theme.podspec.json */; };
 		22F63BAB6F9BFEB63B02485A /* UIImage+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F63A3602708E898C939898 /* UIImage+IMY_Theme.m */; };
 		22F63C67BD58BE7F73E1FA4D /* all_bottomnews_up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F635F215D14D65B6DBCA3D /* all_bottomnews_up@3x.png */; };
 		22F63CA4C8D71B00D221241B /* IMYThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F639C2EE9CBACE301A63B6 /* IMYThemeManager.m */; };
@@ -55,7 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22F63029660E3887D3E038B9 /* IMY-Theme.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = "IMY-Theme.podspec.json"; sourceTree = "<group>"; };
+		22F63029660E3887D3E038B9 /* IMY_Theme.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = IMY_Theme.podspec.json; sourceTree = "<group>"; };
 		22F630341A5FBB652C285F1D /* UIImage+IMY_Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IMY_Theme.h"; sourceTree = "<group>"; };
 		22F6308BF5186FE3C15288FA /* IMYThemeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYThemeConfig.h; sourceTree = "<group>"; };
 		22F630BC7CC17F3AE4F679E1 /* all_bottomnews_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all_bottomnews_up.png; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				2CE3D4221AC8F68E00E8B399 /* Products */,
 				B7608C00A261DCEF727D99FE /* Pods */,
 				AD9A329B0C6CB6D5E81312F7 /* Frameworks */,
-				22F63029660E3887D3E038B9 /* IMY-Theme.podspec.json */,
+				22F63029660E3887D3E038B9 /* IMY_Theme.podspec.json */,
 			);
 			sourceTree = "<group>";
 		};
@@ -357,7 +357,7 @@
 				22F63404ECF6DB72AD2883F1 /* all_bottomnews.png in Resources */,
 				22F63672D149321947EB6A78 /* all_bottommeetyou_up@2x.png in Resources */,
 				22F635AD6ABAF3DA1D012B0C /* chat_pinkbg.png in Resources */,
-				22F63ACC87E0B99FEFC236A4 /* IMY-Theme.podspec.json in Resources */,
+				22F63ACC87E0B99FEFC236A4 /* IMY_Theme.podspec.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

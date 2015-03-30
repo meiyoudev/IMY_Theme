@@ -1,0 +1,9 @@
+{
+	"color":{
+	"SY_BROWN": "#b0d25b",
+    "SY_GREY": "#d099d0",
+    "SY_BLACK": "#00ff00",
+    "SY_RED": "#ffffff",
+     "SY_BG":"#ff00ff"
+	}
+}

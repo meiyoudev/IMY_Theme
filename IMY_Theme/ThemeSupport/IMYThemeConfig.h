@@ -1,0 +1,13 @@
+#define IMY_RED @"SY_RED"
+#define IMY_BLACK @"SY_BLACK"
+#define IMY_GREY @"SY_GREY"
+#define IMY_BROWN @"SY_BROWN"
+
+#import "IMYInvocation.h"
+#import "IMYThemeImageCache.h"
+#import "IMYThemeManager.h"
+#import "NSObject+IMY_Theme.h"
+#import "UIButton+IMY_Theme.h"
+#import "UIImage+IMY_Theme.h"
+#import "UIImageView+IMY_Theme.h"
+#import "UITabBarItem+IMY_Theme.h"

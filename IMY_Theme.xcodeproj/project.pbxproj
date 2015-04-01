@@ -32,8 +32,10 @@
 		22F63CBE0598CDFF17308C58 /* UITabBarItem+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F633E15B7FED422EF6A455 /* UITabBarItem+IMY_Theme.m */; };
 		22F63D4FCF474220E92D268E /* all_bottomnews_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F63687C20696F33ECB94D5 /* all_bottomnews_up@2x.png */; };
 		22F63E5402813F953AC9C5D9 /* all_bottommeetyou.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F636C1AC2906A7CC207FAF /* all_bottommeetyou.png */; };
+		22F63F5CD6A8FC6B0243266F /* UINavigationBar+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F63B249C479368C83D284F /* UINavigationBar+IMY_Theme.m */; };
 		22F63FA7A2CA151938D56287 /* chat_pinkbg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F633C6709F252021B6EB09 /* chat_pinkbg@3x.png */; };
 		22F63FB3E147661EC6C511F9 /* UIImageView+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F63177478756B574410C23 /* UIImageView+IMY_Theme.m */; };
+		2C5E07301ACB80D800F1A8A5 /* nav.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E072F1ACB80D800F1A8A5 /* nav.png */; };
 		2CE3D4271AC8F68E00E8B399 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3D4261AC8F68E00E8B399 /* main.m */; };
 		2CE3D42A1AC8F68E00E8B399 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3D4291AC8F68E00E8B399 /* AppDelegate.m */; };
 		2CE3D42D1AC8F68E00E8B399 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3D42C1AC8F68E00E8B399 /* ViewController.m */; };
@@ -72,6 +74,7 @@
 		22F633E925A749EA53942292 /* IMYSetImageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYSetImageProtocol.h; sourceTree = "<group>"; };
 		22F6347FC5C0A6270BB83674 /* all_bottommeetyou_up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottommeetyou_up@3x.png"; sourceTree = "<group>"; };
 		22F635F215D14D65B6DBCA3D /* all_bottomnews_up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottomnews_up@3x.png"; sourceTree = "<group>"; };
+		22F636101B5B76A6A741476A /* UINavigationBar+IMY_Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+IMY_Theme.h"; sourceTree = "<group>"; };
 		22F63687C20696F33ECB94D5 /* all_bottomnews_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottomnews_up@2x.png"; sourceTree = "<group>"; };
 		22F636C1AC2906A7CC207FAF /* all_bottommeetyou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all_bottommeetyou.png; sourceTree = "<group>"; };
 		22F636DE6EC1202D2A8C1E1F /* NSObject+IMY_Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IMY_Theme.m"; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		22F639A20219AB38FD361F53 /* NSString+IMY_Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IMY_Theme.h"; sourceTree = "<group>"; };
 		22F639C2EE9CBACE301A63B6 /* IMYThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMYThemeManager.m; sourceTree = "<group>"; };
 		22F63A3602708E898C939898 /* UIImage+IMY_Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IMY_Theme.m"; sourceTree = "<group>"; };
+		22F63B249C479368C83D284F /* UINavigationBar+IMY_Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+IMY_Theme.m"; sourceTree = "<group>"; };
 		22F63B640381E4ABFCAD62AE /* all_bottommeetyou_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all_bottommeetyou_up.png; sourceTree = "<group>"; };
 		22F63B9E8A68DA3B3479C891 /* UIColor+IMY_Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IMY_Theme.h"; sourceTree = "<group>"; };
 		22F63C0121A8573D0D2907BD /* UITabBarItem+IMY_Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+IMY_Theme.h"; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		22F63F29E185269E7F9E8EFC /* all_bottommeetyou@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottommeetyou@2x.png"; sourceTree = "<group>"; };
 		22F63F9B552A8AF6204FF0BC /* UIButton+IMY_Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+IMY_Theme.h"; sourceTree = "<group>"; };
 		22F63F9F59A074785C9BF076 /* config.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = config.json; sourceTree = "<group>"; };
+		2C5E072F1ACB80D800F1A8A5 /* nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav.png; sourceTree = "<group>"; };
 		2CE3D4211AC8F68E00E8B399 /* IMY_Theme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMY_Theme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE3D4251AC8F68E00E8B399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CE3D4261AC8F68E00E8B399 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -156,6 +161,8 @@
 				22F638949D6E1B54816EFB80 /* IMYInvocation.h */,
 				22F630C91CEAEF81A99D71CB /* NSString+IMY_Theme.m */,
 				22F639A20219AB38FD361F53 /* NSString+IMY_Theme.h */,
+				22F63B249C479368C83D284F /* UINavigationBar+IMY_Theme.m */,
+				22F636101B5B76A6A741476A /* UINavigationBar+IMY_Theme.h */,
 			);
 			path = ThemeSupport;
 			sourceTree = "<group>";
@@ -199,6 +206,7 @@
 		2CE3D4241AC8F68E00E8B399 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C5E072F1ACB80D800F1A8A5 /* nav.png */,
 				2CE3D44B1AC8F84D00E8B399 /* theme2.bundle */,
 				2CE3D4251AC8F68E00E8B399 /* Info.plist */,
 				2CE3D4261AC8F68E00E8B399 /* main.m */,
@@ -352,6 +360,7 @@
 				22F63769C5B1AC9B6F2E7E33 /* all_bottomnews@3x.png in Resources */,
 				22F63E5402813F953AC9C5D9 /* all_bottommeetyou.png in Resources */,
 				22F63D4FCF474220E92D268E /* all_bottomnews_up@2x.png in Resources */,
+				2C5E07301ACB80D800F1A8A5 /* nav.png in Resources */,
 				22F630D5411766907581DE01 /* all_bottomnews@2x.png in Resources */,
 				22F63C67BD58BE7F73E1FA4D /* all_bottomnews_up@3x.png in Resources */,
 				22F63404ECF6DB72AD2883F1 /* all_bottomnews.png in Resources */,
@@ -421,6 +430,7 @@
 				22F630AEC299D85396C7F4E3 /* UIButton+IMY_Theme.m in Sources */,
 				22F63BAB6F9BFEB63B02485A /* UIImage+IMY_Theme.m in Sources */,
 				22F63A48A014A827A2C4576F /* NSString+IMY_Theme.m in Sources */,
+				22F63F5CD6A8FC6B0243266F /* UINavigationBar+IMY_Theme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

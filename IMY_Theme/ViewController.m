@@ -14,6 +14,7 @@
 #import "UIImageView+IMY_Theme.h"
 #import "UIColor+IMY_Theme.h"
 #import "UITabBarItem+IMY_Theme.h"
+#import "UINavigationBar+IMY_Theme.h"
 
 @interface ViewController () <IMY_ThemeChangeProtocol>
 
@@ -36,12 +37,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self imy_themeChanged];
+    [self.navigationController.navigationBar imy_setBackgroundImageWithKey:@"nav" forBarMetrics:UIBarMetricsDefault];
     UIButton *button = [[UIButton alloc] init];
     [self.view addSubview:button];
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(10);
-        make.top.equalTo(self.view).offset(20);
+        make.top.equalTo(self.view).offset(10);
         make.size.mas_equalTo(CGSizeMake(200, 50));
     }];
     [button imy_setImageForKey:@"all_bottommeetyou" andState:UIControlStateNormal];

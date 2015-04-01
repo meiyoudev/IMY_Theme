@@ -213,7 +213,11 @@ static NSHashTable *invocationHashTable = nil;
 
 - (void)addToThemeChangeObserver
 {
-    [[IMYThemeManager sharedIMYThemeManager] addThemeChangeObserver:self];
+    if ([self respondsToSelector:@selector(imy_themeChanged)])
+    {
+        [[IMYThemeManager sharedIMYThemeManager] addThemeChangeObserver:self];
+        [self performSelector:@selector(imy_themeChanged)];
+    }
 }
 
 + (void)imy_invoke

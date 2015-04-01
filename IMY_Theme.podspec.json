@@ -11,9 +11,6 @@
   "source_files": "IMY_Theme/ThemeSupport/*.{h,m}",
   "requires_arc": true,
   "dependencies": {
-    "BlocksKit": [],
-    "Aspects": [],
-    "Masonry": [],
-    "ObjcAssociatedObjectHelpers": []
+    "BlocksKit": []
   }
 }

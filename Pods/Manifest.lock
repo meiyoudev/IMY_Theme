@@ -1,5 +1,4 @@
 PODS:
-  - Aspects (1.4.1)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -16,23 +15,13 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - Masonry (0.6.1)
-  - ObjcAssociatedObjectHelpers (2.0.0):
-    - ObjcAssociatedObjectHelpers/Core (= 2.0.0)
-    - ObjcAssociatedObjectHelpers/NSObject+Dictionary (= 2.0.0)
-  - ObjcAssociatedObjectHelpers/Core (2.0.0)
-  - ObjcAssociatedObjectHelpers/NSObject+Dictionary (2.0.0):
-    - ObjcAssociatedObjectHelpers/Core
 
 DEPENDENCIES:
-  - Aspects
   - BlocksKit
   - Masonry
-  - ObjcAssociatedObjectHelpers
 
 SPEC CHECKSUMS:
-  Aspects: a6368eba05295b24ffe0e9acfb9080cc3b0f4b5f
-  BlocksKit: 4439e7f30a9f90743462ca63545a15c1f4304cef
-  Masonry: 2cb49fd14d203d2db5ca6bb017135b235dde9980
-  ObjcAssociatedObjectHelpers: a08b223c52d4064216543782f5807db9fe565979
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.1

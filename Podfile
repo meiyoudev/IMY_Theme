@@ -1,5 +1,5 @@
 platform :ios, '6.0'
 pod 'BlocksKit'
-pod 'Aspects'
+# pod 'Aspects'
 pod 'Masonry'
-pod 'ObjcAssociatedObjectHelpers'
+# pod 'ObjcAssociatedObjectHelpers'

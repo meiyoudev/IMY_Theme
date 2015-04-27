@@ -27,13 +27,9 @@
 
 - (void)addToThemeChangeObserver;
 
-- (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd;
+- (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd key:(NSString *)key;
 
-- (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd forState:(NSInteger)state;
-
-- (void)forceAddInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd;
-
-- (void)forceAddInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd forState:(NSInteger)state;
+- (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd forState:(NSInteger)state key:(NSString *)key;
 
 @end
 

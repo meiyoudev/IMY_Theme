@@ -29,6 +29,6 @@
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target imy_setFinishedSelectedImageName:selectedImageName withFinishedUnselectedImageName:unselectedImageName];
         }];
-    } andCMD:_cmd];
+    } andCMD:_cmd key:[selectedImageName stringByAppendingString:unselectedImageName]];
 }
 @end

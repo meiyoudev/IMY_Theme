@@ -15,6 +15,17 @@
 #import "UIColor+IMY_Theme.h"
 #import "UITabBarItem+IMY_Theme.h"
 #import "UINavigationBar+IMY_Theme.h"
+#import "UIView+BlocksKit.h"
+#import "ObjcAssociatedObjectHelpers.h"
+#import "Test.h"
+
+@interface NSString(Test)
+@property Test *bigData;
+@end
+
+@implementation NSString(Test)
+SYNTHESIZE_ASC_OBJ(bigData, setBigData)
+@end
 
 @interface ViewController () <IMY_ThemeChangeProtocol>
 
@@ -51,7 +62,9 @@
     [button imy_setTitleColorForKey:@"SY_BROWN" andState:UIControlStateNormal];
     [button imy_setTitleColorForKey:@"SY_RED" andState:UIControlStateHighlighted];
     [button imy_setBackgroundColorForKey:@"SY_GREY"];
+    [button imy_setBackgroundColorForKey:@"SY_RED"];
 
+    [button addTarget:self action:@selector(changeTheme) forControlEvents:UIControlEventTouchUpInside];
 
     UIButton *button1 = [[UIButton alloc] init];
     [self.view addSubview:button1];
@@ -106,8 +119,18 @@
     }];
     [textView imy_setTextColorForKey:@"SY_GREY"];
     [textView imy_setBackgroundColorForKey:@"SY_RED"];
-    //手动处理主题变化,需要实现 IMY_ThemeChangeProtocol
+//    手动处理主题变化,需要实现 IMY_ThemeChangeProtocol
     [self addToThemeChangeObserver];
+
+    IMYBlockWeakToWeakSelf
+    [self.view bk_whenTapped:^{
+        [weakSelf.navigationController pushViewController:[ViewController new] animated:YES];
+    }];
+
+    [UIImage imageNamed:@"chat_pinkbg.png"];
+
+
+
 
 }
 
@@ -137,3 +160,4 @@
 }
 
 @end
+

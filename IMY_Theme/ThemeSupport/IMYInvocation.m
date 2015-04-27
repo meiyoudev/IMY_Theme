@@ -6,6 +6,11 @@
 
 #import "IMYInvocation.h"
 #import "NSArray+BlocksKit.h"
+#import "ObjcAssociatedObjectHelpers.h"
+
+@implementation NSInvocation(IMYTheme)
+SYNTHESIZE_ASC_OBJ(key, setKey)
+@end
 
 @interface IMYInvocation ()
 @property(nonatomic, strong) NSMutableDictionary *selDict;
@@ -23,26 +28,32 @@
     return self;
 }
 
-- (BOOL)hasAddInvocationForState:(NSInteger)state andCMD:(SEL)cmd
+- (BOOL)shouldAddInvocation:(NSInteger)state andCMD:(SEL)cmd key:(NSString *)key
 {
     NSString *selString = NSStringFromSelector(cmd);
     NSMutableDictionary *dict = _selDict[selString];
-    return dict[@(state)] != nil;
-}
-
-
-- (void)addInvocation:(NSInvocation *)invocation cmd:(SEL)cmd forState:(NSInteger)state
-{
-    NSMutableDictionary *mapTable = [self dictOfSEL:cmd];
-    if (!mapTable[@(state)])
+    NSInvocation *invocation = dict[@(state)];
+    if (!invocation)
     {
-        mapTable[@(state)] = invocation;
+        return YES;
+    }
+    else
+    {
+        return ![invocation.key isEqualToString:key];
     }
 }
 
-- (void)forceAddInvocation:(NSInvocation *)invocation cmd:(SEL)cmd forState:(NSInteger)state
+-(void)removeAddInvocationForState:(NSInteger)state andCMD:(SEL)cmd
+{
+    NSString *selString = NSStringFromSelector(cmd);
+    NSMutableDictionary *dict = _selDict[selString];
+    dict[@(state)] = nil;
+}
+
+- (void)addInvocation:(NSInvocation *)invocation cmd:(SEL)cmd forState:(NSInteger)state andKey:(NSString *)key
 {
     NSMutableDictionary *mapTable = [self dictOfSEL:cmd];
+    invocation.key = key;
     mapTable[@(state)] = invocation;
 }
 
@@ -67,5 +78,9 @@
     }];
 }
 
+- (void)dealloc
+{
+    NSLog(@"MYI");
+}
 
 @end

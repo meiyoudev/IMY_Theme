@@ -12,12 +12,16 @@ typedef NS_ENUM(NSInteger, IMYImageViewState)
     IMYUIImageViewHighlightedState
 };
 
+@interface NSInvocation (IMYTheme)
+@property(strong) NSString *key;
+@end
+
 @interface IMYInvocation : NSObject
 
-- (BOOL)hasAddInvocationForState:(NSInteger)state andCMD:(SEL)cmd;
+- (BOOL)shouldAddInvocation:(NSInteger)state andCMD:(SEL)cmd key:(NSString *)key;
 
-- (void)addInvocation:(NSInvocation *)invocation cmd:(SEL)cmd forState:(NSInteger)state;
+- (void)removeAddInvocationForState:(NSInteger)state andCMD:(SEL)cmd;
 
-- (void)forceAddInvocation:(NSInvocation *)invocation cmd:(SEL)cmd forState:(NSInteger)state;
+- (void)addInvocation:(NSInvocation *)invocation cmd:(SEL)cmd forState:(NSInteger)state andKey:(NSString *)key;
 
 @end

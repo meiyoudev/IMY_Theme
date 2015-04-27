@@ -15,11 +15,11 @@
 {
     IMYBlockWeakToWeakSelf
     [self setBackgroundImage:[UIImage imy_imageForKey:key] forBarMetrics:barMetrics];
-    [self forceAddInvocationWithBlock:^NSInvocation * {
+    [self addInvocationWithBlock:^NSInvocation * {
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target imy_setBackgroundImageWithKey:key forBarMetrics:barMetrics];
         }];
-    } andCMD:_cmd forState:barMetrics];
+    } andCMD:_cmd forState:barMetrics key:key];
 }
 
 @end

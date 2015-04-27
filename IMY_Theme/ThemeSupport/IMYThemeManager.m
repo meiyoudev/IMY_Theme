@@ -10,6 +10,7 @@
 #import "NSArray+BlocksKit.h"
 #import "UIColor+IMY_Theme.h"
 #import "NSString+IMY_Theme.h"
+#import "IMYThemeConfig.h"
 
 #define IMY_ThemePath_Key @"IMY_ThemePath_Key"
 
@@ -17,6 +18,7 @@ static NSString *Home_Path = nil;
 static NSString *Main_Bundle_Path = nil;
 
 @interface IMYThemeManager ()
+@property(nonatomic, strong) NSMutableDictionary *defaultThemeColorDict;
 @property(nonatomic, strong) NSMutableDictionary *colorDict;
 @property(nonatomic, strong) NSHashTable *observers;
 @end
@@ -46,6 +48,17 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
         Home_Path = NSHomeDirectory();
         Main_Bundle_Path = [[NSBundle mainBundle] resourcePath];
         self.themePath = [[[NSUserDefaults standardUserDefaults] stringForKey:IMY_ThemePath_Key] imy_fullPath];
+        self.defaultThemeColorDict = [[NSMutableDictionary alloc] init];
+        NSString *themeConfigFilePath = [[NSBundle mainBundle] pathForResource:IMY_CONFIG_NAME ofType:nil];
+        NSData *jsonData = [[NSData alloc] initWithContentsOfFile:themeConfigFilePath];
+        if (jsonData)
+        {
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+            NSDictionary *colors = dict[@"color"];
+            [colors enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                _defaultThemeColorDict[key] = [UIColor imy_colorWithHexString:obj];
+            }];
+        }
     }
 
     return self;
@@ -72,7 +85,12 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
 
 - (UIColor *)colorForKey:(NSString *)key
 {
-    return _colorDict[key];
+    UIColor *color = _colorDict[key];
+    if (!color)
+    {
+        color = _defaultThemeColorDict[key];
+    }
+    return color ?: [UIColor blackColor];
 }
 
 
@@ -89,7 +107,7 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
 - (void)resetThemeValues
 {
     [self.colorDict removeAllObjects];
-    NSString *themeConfigFilePath = [self resourcePathForKey:@"config.json"];
+    NSString *themeConfigFilePath = [self resourcePathForKey:IMY_CONFIG_NAME];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:themeConfigFilePath];
     if (!jsonData)
     {

@@ -9,9 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "NSObject+IMY_Theme.h"
-#import "UIImage+IMY_Theme.h"
 
-@interface AppDelegate ()<IMY_ThemeChangeProtocol>
+@interface AppDelegate () <IMY_ThemeChangeProtocol>
 
 @end
 
@@ -27,7 +26,7 @@
     ViewController *viewController1 = [[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
-    tabBarController.viewControllers = @[nav,nav1];
+    tabBarController.viewControllers = @[nav, nav1];
     _window.rootViewController = tabBarController;
 
     [self addToThemeChangeObserver];

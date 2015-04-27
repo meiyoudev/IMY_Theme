@@ -34,7 +34,7 @@
     }
     if (usingCache)
     {
-        [[IMYThemeImageCache sharedIMYThemeImageCache] setObject:image forKey:key];
+//        [[IMYThemeImageCache sharedIMYThemeImageCache] setObject:image forKey:key];
     }
     return image;
 }

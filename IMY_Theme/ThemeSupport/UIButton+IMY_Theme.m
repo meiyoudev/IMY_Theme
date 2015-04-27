@@ -52,7 +52,7 @@
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target imy_setTitleColorForKey:key andState:state];
         }];
-    } andCMD:_cmd forState:state];
+    } andCMD:_cmd forState:state key:key];
 }
 
 

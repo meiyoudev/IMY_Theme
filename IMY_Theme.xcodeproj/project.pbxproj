@@ -22,6 +22,7 @@
 		22F63769C5B1AC9B6F2E7E33 /* all_bottomnews@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F63E3924DFC6A138965C1E /* all_bottomnews@3x.png */; };
 		22F63969E2765FA2138A7C60 /* chat_pinkbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F63D8F3D104EA49C50F1E0 /* chat_pinkbg@2x.png */; };
 		22F6398C23C69CEF4AC7A26B /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 22F63F9F59A074785C9BF076 /* config.json */; };
+		22F63A422B20AD076AAED2C6 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F637608E617CC7B2D97A91 /* Test.m */; };
 		22F63A48A014A827A2C4576F /* NSString+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F630C91CEAEF81A99D71CB /* NSString+IMY_Theme.m */; };
 		22F63A521C1D4929926F87A8 /* all_bottommeetyou@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F6380E201916D8D0AF46CC /* all_bottommeetyou@3x.png */; };
 		22F63AB874CEE764CB7352BD /* NSObject+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F636DE6EC1202D2A8C1E1F /* NSObject+IMY_Theme.m */; };
@@ -41,20 +42,9 @@
 		2CE3D42D1AC8F68E00E8B399 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3D42C1AC8F68E00E8B399 /* ViewController.m */; };
 		2CE3D4321AC8F68E00E8B399 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE3D4311AC8F68E00E8B399 /* Images.xcassets */; };
 		2CE3D4351AC8F68E00E8B399 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE3D4331AC8F68E00E8B399 /* LaunchScreen.xib */; };
-		2CE3D4411AC8F68E00E8B399 /* IMY_ThemeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE3D4401AC8F68E00E8B399 /* IMY_ThemeTests.m */; };
 		2CE3D44D1AC8F84D00E8B399 /* theme2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2CE3D44B1AC8F84D00E8B399 /* theme2.bundle */; };
 		A2B81126733AD7F261C349ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A31AB1AC90ED5F8A4EC0A8 /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2CE3D43B1AC8F68E00E8B399 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CE3D4191AC8F68E00E8B399 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CE3D4201AC8F68E00E8B399;
-			remoteInfo = IMY_Theme;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22F63029660E3887D3E038B9 /* IMY_Theme.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = IMY_Theme.podspec.json; sourceTree = "<group>"; };
@@ -78,6 +68,7 @@
 		22F63687C20696F33ECB94D5 /* all_bottomnews_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottomnews_up@2x.png"; sourceTree = "<group>"; };
 		22F636C1AC2906A7CC207FAF /* all_bottommeetyou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all_bottommeetyou.png; sourceTree = "<group>"; };
 		22F636DE6EC1202D2A8C1E1F /* NSObject+IMY_Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IMY_Theme.m"; sourceTree = "<group>"; };
+		22F637608E617CC7B2D97A91 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		22F6380E201916D8D0AF46CC /* all_bottommeetyou@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottommeetyou@3x.png"; sourceTree = "<group>"; };
 		22F63829CA7F060D1C27D267 /* UIButton+IMY_Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+IMY_Theme.m"; sourceTree = "<group>"; };
 		22F6387C62CEF1DE768C406D /* IMYThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYThemeManager.h; sourceTree = "<group>"; };
@@ -95,6 +86,7 @@
 		22F63D8F3D104EA49C50F1E0 /* chat_pinkbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_pinkbg@2x.png"; sourceTree = "<group>"; };
 		22F63E0D151073DB3BA8BDDD /* IMYThemeImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYThemeImageCache.h; sourceTree = "<group>"; };
 		22F63E3924DFC6A138965C1E /* all_bottomnews@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottomnews@3x.png"; sourceTree = "<group>"; };
+		22F63E974D7E7BA5B77EA93B /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		22F63F29E185269E7F9E8EFC /* all_bottommeetyou@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottommeetyou@2x.png"; sourceTree = "<group>"; };
 		22F63F9B552A8AF6204FF0BC /* UIButton+IMY_Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+IMY_Theme.h"; sourceTree = "<group>"; };
 		22F63F9F59A074785C9BF076 /* config.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = config.json; sourceTree = "<group>"; };
@@ -108,10 +100,8 @@
 		2CE3D42C1AC8F68E00E8B399 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2CE3D4311AC8F68E00E8B399 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2CE3D4341AC8F68E00E8B399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2CE3D43A1AC8F68E00E8B399 /* IMY_ThemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMY_ThemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CE3D43F1AC8F68E00E8B399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CE3D4401AC8F68E00E8B399 /* IMY_ThemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMY_ThemeTests.m; sourceTree = "<group>"; };
 		2CE3D44B1AC8F84D00E8B399 /* theme2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = theme2.bundle; sourceTree = "<group>"; };
+		362D61911AE7409D000D77A6 /* IMYThemeColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYThemeColorMacros.h; sourceTree = "<group>"; };
 		B26E74AB06A4A0E24BF5D82F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3146F7BBCE0EC616D216450 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F2A31AB1AC90ED5F8A4EC0A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,13 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2B81126733AD7F261C349ED /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CE3D4371AC8F68E00E8B399 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +135,6 @@
 				22F63B9E8A68DA3B3479C891 /* UIColor+IMY_Theme.h */,
 				22F63177478756B574410C23 /* UIImageView+IMY_Theme.m */,
 				22F6398F09B4FB5996449BC0 /* UIColor+IMY_Theme.m */,
-				22F6308BF5186FE3C15288FA /* IMYThemeConfig.h */,
 				22F630341A5FBB652C285F1D /* UIImage+IMY_Theme.h */,
 				22F63829CA7F060D1C27D267 /* UIButton+IMY_Theme.m */,
 				22F633E925A749EA53942292 /* IMYSetImageProtocol.h */,
@@ -163,6 +145,8 @@
 				22F639A20219AB38FD361F53 /* NSString+IMY_Theme.h */,
 				22F63B249C479368C83D284F /* UINavigationBar+IMY_Theme.m */,
 				22F636101B5B76A6A741476A /* UINavigationBar+IMY_Theme.h */,
+				22F6308BF5186FE3C15288FA /* IMYThemeConfig.h */,
+				362D61911AE7409D000D77A6 /* IMYThemeColorMacros.h */,
 			);
 			path = ThemeSupport;
 			sourceTree = "<group>";
@@ -171,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				2CE3D4231AC8F68E00E8B399 /* IMY_Theme */,
-				2CE3D43D1AC8F68E00E8B399 /* IMY_ThemeTests */,
 				2CE3D4221AC8F68E00E8B399 /* Products */,
 				B7608C00A261DCEF727D99FE /* Pods */,
 				AD9A329B0C6CB6D5E81312F7 /* Frameworks */,
@@ -183,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				2CE3D4211AC8F68E00E8B399 /* IMY_Theme.app */,
-				2CE3D43A1AC8F68E00E8B399 /* IMY_ThemeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +181,8 @@
 				2CE3D4331AC8F68E00E8B399 /* LaunchScreen.xib */,
 				2CE3D4241AC8F68E00E8B399 /* Supporting Files */,
 				22F63C98BADFF56D688889AA /* ThemeSupport */,
+				22F637608E617CC7B2D97A91 /* Test.m */,
+				22F63E974D7E7BA5B77EA93B /* Test.h */,
 			);
 			path = IMY_Theme;
 			sourceTree = "<group>";
@@ -226,23 +210,6 @@
 				22F63C33371C30CAD816210D /* all_bottomnews.png */,
 				22F631FD6D08EA97009C8462 /* all_bottommeetyou_up@2x.png */,
 				22F631B19D45A66195DE1925 /* chat_pinkbg.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2CE3D43D1AC8F68E00E8B399 /* IMY_ThemeTests */ = {
-			isa = PBXGroup;
-			children = (
-				2CE3D4401AC8F68E00E8B399 /* IMY_ThemeTests.m */,
-				2CE3D43E1AC8F68E00E8B399 /* Supporting Files */,
-			);
-			path = IMY_ThemeTests;
-			sourceTree = "<group>";
-		};
-		2CE3D43E1AC8F68E00E8B399 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2CE3D43F1AC8F68E00E8B399 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -286,24 +253,6 @@
 			productReference = 2CE3D4211AC8F68E00E8B399 /* IMY_Theme.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2CE3D4391AC8F68E00E8B399 /* IMY_ThemeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CE3D4471AC8F68E00E8B399 /* Build configuration list for PBXNativeTarget "IMY_ThemeTests" */;
-			buildPhases = (
-				2CE3D4361AC8F68E00E8B399 /* Sources */,
-				2CE3D4371AC8F68E00E8B399 /* Frameworks */,
-				2CE3D4381AC8F68E00E8B399 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2CE3D43C1AC8F68E00E8B399 /* PBXTargetDependency */,
-			);
-			name = IMY_ThemeTests;
-			productName = IMY_ThemeTests;
-			productReference = 2CE3D43A1AC8F68E00E8B399 /* IMY_ThemeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,10 +264,6 @@
 				TargetAttributes = {
 					2CE3D4201AC8F68E00E8B399 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					2CE3D4391AC8F68E00E8B399 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 2CE3D4201AC8F68E00E8B399;
 					};
 				};
 			};
@@ -336,7 +281,6 @@
 			projectRoot = "";
 			targets = (
 				2CE3D4201AC8F68E00E8B399 /* IMY_Theme */,
-				2CE3D4391AC8F68E00E8B399 /* IMY_ThemeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -367,13 +311,6 @@
 				22F63672D149321947EB6A78 /* all_bottommeetyou_up@2x.png in Resources */,
 				22F635AD6ABAF3DA1D012B0C /* chat_pinkbg.png in Resources */,
 				22F63ACC87E0B99FEFC236A4 /* IMY_Theme.podspec.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CE3D4381AC8F68E00E8B399 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,26 +368,11 @@
 				22F63BAB6F9BFEB63B02485A /* UIImage+IMY_Theme.m in Sources */,
 				22F63A48A014A827A2C4576F /* NSString+IMY_Theme.m in Sources */,
 				22F63F5CD6A8FC6B0243266F /* UINavigationBar+IMY_Theme.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CE3D4361AC8F68E00E8B399 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CE3D4411AC8F68E00E8B399 /* IMY_ThemeTests.m in Sources */,
+				22F63A422B20AD076AAED2C6 /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2CE3D43C1AC8F68E00E8B399 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CE3D4201AC8F68E00E8B399 /* IMY_Theme */;
-			targetProxy = 2CE3D43B1AC8F68E00E8B399 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2CE3D4331AC8F68E00E8B399 /* LaunchScreen.xib */ = {
@@ -566,40 +488,6 @@
 			};
 			name = Release;
 		};
-		2CE3D4481AC8F68E00E8B399 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = IMY_ThemeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IMY_Theme.app/IMY_Theme";
-			};
-			name = Debug;
-		};
-		2CE3D4491AC8F68E00E8B399 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = IMY_ThemeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IMY_Theme.app/IMY_Theme";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -617,15 +505,6 @@
 			buildConfigurations = (
 				2CE3D4451AC8F68E00E8B399 /* Debug */,
 				2CE3D4461AC8F68E00E8B399 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CE3D4471AC8F68E00E8B399 /* Build configuration list for PBXNativeTarget "IMY_ThemeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CE3D4481AC8F68E00E8B399 /* Debug */,
-				2CE3D4491AC8F68E00E8B399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

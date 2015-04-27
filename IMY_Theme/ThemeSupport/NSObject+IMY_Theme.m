@@ -44,36 +44,19 @@ static NSHashTable *invocationHashTable = nil;
 }
 
 
-- (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd
+- (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd key:(NSString *)key
 {
-    [self addInvocationWithBlock:block andCMD:cmd forState:0];
+    [self addInvocationWithBlock:block andCMD:cmd forState:0 key:key];
 }
 
-- (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd forState:(NSInteger)state
+- (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd forState:(NSInteger)state key:(NSString *)key
 {
-    if (block && ![self.imyInvocation hasAddInvocationForState:state andCMD:cmd])
+    if (block && [self.imyInvocation shouldAddInvocation:state andCMD:cmd key:key])
     {
         NSInvocation *invocation = block();
         if (invocation)
         {
-            [self.imyInvocation addInvocation:invocation cmd:cmd forState:state];
-        }
-    }
-}
-
-- (void)forceAddInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd
-{
-    [self forceAddInvocationWithBlock:block andCMD:cmd forState:0];
-}
-
-- (void)forceAddInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd forState:(NSInteger)state
-{
-    if (block)
-    {
-        NSInvocation *invocation = block();
-        if (invocation)
-        {
-            [self.imyInvocation forceAddInvocation:invocation cmd:cmd forState:state];
+            [self.imyInvocation addInvocation:invocation cmd:cmd forState:state andKey:key];
         }
     }
 }
@@ -103,7 +86,7 @@ static NSHashTable *invocationHashTable = nil;
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target _imy_setCenterResizeImageForKey:key usingCache:usingCache forState:state];
         }];
-    } andCMD:_cmd forState:state];
+    } andCMD:_cmd forState:state key:key];
 }
 
 - (void)_imy_setImageForKey:(NSString *)key resizableImageWithCapInsets:(UIEdgeInsets)capInsets forState:(NSInteger)state
@@ -125,7 +108,7 @@ static NSHashTable *invocationHashTable = nil;
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target _imy_setImageForKey:key usingCache:usingCache stretchableImageWithLeftCapWidth:leftCapWidth topCapHeight:topCapHeight forState:state];
         }];
-    } andCMD:_cmd forState:state];
+    } andCMD:_cmd forState:state key:key];
 }
 
 - (void)_imy_setImageForKey:(NSString *)key usingCache:(BOOL)usingCache resizableImageWithCapInsets:(UIEdgeInsets)capInsets forState:(NSInteger)state
@@ -141,7 +124,7 @@ static NSHashTable *invocationHashTable = nil;
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target _imy_setImageForKey:key usingCache:usingCache resizableImageWithCapInsets:capInsets forState:state];
         }];
-    } andCMD:_cmd forState:state];
+    } andCMD:_cmd forState:state key:key];
 }
 
 - (void)_imy_setBackgroundImageForKey:(NSString *)key forState:(NSInteger)state
@@ -168,7 +151,7 @@ static NSHashTable *invocationHashTable = nil;
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target _imy_setCenterResizeBackgroundImageForKey:key usingCache:usingCache forState:state];
         }];
-    } andCMD:_cmd forState:state];
+    } andCMD:_cmd forState:state key:key];
 
 }
 
@@ -191,7 +174,7 @@ static NSHashTable *invocationHashTable = nil;
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target _imy_setBackgroundImageForKey:key usingCache:usingCache stretchableImageWithLeftCapWidth:leftCapWidth topCapHeight:topCapHeight forState:state];
         }];
-    } andCMD:_cmd forState:state];
+    } andCMD:_cmd forState:state key:key];
 }
 
 - (void)_imy_setBackgroundImageForKey:(NSString *)key usingCache:(BOOL)usingCache resizableImageWithCapInsets:(UIEdgeInsets)capInsets forState:(NSInteger)state
@@ -207,7 +190,7 @@ static NSHashTable *invocationHashTable = nil;
         return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
             [target _imy_setBackgroundImageForKey:key usingCache:usingCache resizableImageWithCapInsets:capInsets forState:state];
         }];
-    } andCMD:_cmd forState:state];
+    } andCMD:_cmd forState:state key:key];
 }
 
 
@@ -288,7 +271,7 @@ static NSHashTable *invocationHashTable = nil;
             return [NSInvocation bk_invocationWithTarget:weakSelf block:^(id target) {
                 [target _imy_setColorForKey:key withSel:sel];
             }];
-        } andCMD:sel];
+        } andCMD:sel key:key];
     }
 }
 

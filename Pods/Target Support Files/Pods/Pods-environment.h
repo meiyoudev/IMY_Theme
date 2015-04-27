@@ -6,6 +6,12 @@
 // project.
 
 
+// Aspects
+#define COCOAPODS_POD_AVAILABLE_Aspects
+#define COCOAPODS_VERSION_MAJOR_Aspects 1
+#define COCOAPODS_VERSION_MINOR_Aspects 4
+#define COCOAPODS_VERSION_PATCH_Aspects 1
+
 // BlocksKit
 #define COCOAPODS_POD_AVAILABLE_BlocksKit
 #define COCOAPODS_VERSION_MAJOR_BlocksKit 2
@@ -47,4 +53,22 @@
 #define COCOAPODS_VERSION_MAJOR_Masonry 0
 #define COCOAPODS_VERSION_MINOR_Masonry 6
 #define COCOAPODS_VERSION_PATCH_Masonry 1
+
+// ObjcAssociatedObjectHelpers
+#define COCOAPODS_POD_AVAILABLE_ObjcAssociatedObjectHelpers
+#define COCOAPODS_VERSION_MAJOR_ObjcAssociatedObjectHelpers 2
+#define COCOAPODS_VERSION_MINOR_ObjcAssociatedObjectHelpers 0
+#define COCOAPODS_VERSION_PATCH_ObjcAssociatedObjectHelpers 0
+
+// ObjcAssociatedObjectHelpers/Core
+#define COCOAPODS_POD_AVAILABLE_ObjcAssociatedObjectHelpers_Core
+#define COCOAPODS_VERSION_MAJOR_ObjcAssociatedObjectHelpers_Core 2
+#define COCOAPODS_VERSION_MINOR_ObjcAssociatedObjectHelpers_Core 0
+#define COCOAPODS_VERSION_PATCH_ObjcAssociatedObjectHelpers_Core 0
+
+// ObjcAssociatedObjectHelpers/NSObject+Dictionary
+#define COCOAPODS_POD_AVAILABLE_ObjcAssociatedObjectHelpers_NSObject_Dictionary
+#define COCOAPODS_VERSION_MAJOR_ObjcAssociatedObjectHelpers_NSObject_Dictionary 2
+#define COCOAPODS_VERSION_MINOR_ObjcAssociatedObjectHelpers_NSObject_Dictionary 0
+#define COCOAPODS_VERSION_PATCH_ObjcAssociatedObjectHelpers_NSObject_Dictionary 0
 

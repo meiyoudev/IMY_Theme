@@ -22,6 +22,7 @@
 		22F63769C5B1AC9B6F2E7E33 /* all_bottomnews@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F63E3924DFC6A138965C1E /* all_bottomnews@3x.png */; };
 		22F63969E2765FA2138A7C60 /* chat_pinkbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F63D8F3D104EA49C50F1E0 /* chat_pinkbg@2x.png */; };
 		22F6398C23C69CEF4AC7A26B /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 22F63F9F59A074785C9BF076 /* config.json */; };
+		22F63A422B20AD076AAED2C6 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F637608E617CC7B2D97A91 /* Test.m */; };
 		22F63A48A014A827A2C4576F /* NSString+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F630C91CEAEF81A99D71CB /* NSString+IMY_Theme.m */; };
 		22F63A521C1D4929926F87A8 /* all_bottommeetyou@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F6380E201916D8D0AF46CC /* all_bottommeetyou@3x.png */; };
 		22F63AB874CEE764CB7352BD /* NSObject+IMY_Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F636DE6EC1202D2A8C1E1F /* NSObject+IMY_Theme.m */; };
@@ -78,6 +79,7 @@
 		22F63687C20696F33ECB94D5 /* all_bottomnews_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottomnews_up@2x.png"; sourceTree = "<group>"; };
 		22F636C1AC2906A7CC207FAF /* all_bottommeetyou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all_bottommeetyou.png; sourceTree = "<group>"; };
 		22F636DE6EC1202D2A8C1E1F /* NSObject+IMY_Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IMY_Theme.m"; sourceTree = "<group>"; };
+		22F637608E617CC7B2D97A91 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		22F6380E201916D8D0AF46CC /* all_bottommeetyou@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottommeetyou@3x.png"; sourceTree = "<group>"; };
 		22F63829CA7F060D1C27D267 /* UIButton+IMY_Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+IMY_Theme.m"; sourceTree = "<group>"; };
 		22F6387C62CEF1DE768C406D /* IMYThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYThemeManager.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		22F63D8F3D104EA49C50F1E0 /* chat_pinkbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_pinkbg@2x.png"; sourceTree = "<group>"; };
 		22F63E0D151073DB3BA8BDDD /* IMYThemeImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYThemeImageCache.h; sourceTree = "<group>"; };
 		22F63E3924DFC6A138965C1E /* all_bottomnews@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottomnews@3x.png"; sourceTree = "<group>"; };
+		22F63E974D7E7BA5B77EA93B /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		22F63F29E185269E7F9E8EFC /* all_bottommeetyou@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all_bottommeetyou@2x.png"; sourceTree = "<group>"; };
 		22F63F9B552A8AF6204FF0BC /* UIButton+IMY_Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+IMY_Theme.h"; sourceTree = "<group>"; };
 		22F63F9F59A074785C9BF076 /* config.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; path = config.json; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				2CE3D4331AC8F68E00E8B399 /* LaunchScreen.xib */,
 				2CE3D4241AC8F68E00E8B399 /* Supporting Files */,
 				22F63C98BADFF56D688889AA /* ThemeSupport */,
+				22F637608E617CC7B2D97A91 /* Test.m */,
+				22F63E974D7E7BA5B77EA93B /* Test.h */,
 			);
 			path = IMY_Theme;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				22F63BAB6F9BFEB63B02485A /* UIImage+IMY_Theme.m in Sources */,
 				22F63A48A014A827A2C4576F /* NSString+IMY_Theme.m in Sources */,
 				22F63F5CD6A8FC6B0243266F /* UINavigationBar+IMY_Theme.m in Sources */,
+				22F63A422B20AD076AAED2C6 /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

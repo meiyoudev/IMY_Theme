@@ -99,6 +99,7 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
     _themePath = themePath;
     [[IMYThemeImageCache sharedIMYThemeImageCache] clear];
     [[NSUserDefaults standardUserDefaults] setObject:themePath forKey:IMY_ThemePath_Key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [self resetThemeValues];
     [self themeDidChanged];
 }

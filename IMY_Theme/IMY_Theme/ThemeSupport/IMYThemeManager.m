@@ -21,6 +21,7 @@ static NSString *Main_Bundle_Path = nil;
 @property(nonatomic, strong) NSMutableDictionary *defaultThemeColorDict;
 @property(nonatomic, strong) NSMutableDictionary *colorDict;
 @property(nonatomic, strong) NSHashTable *observers;
+@property(nonatomic, strong) NSMutableArray* configFileNames;
 @end
 
 @implementation IMYThemeManager
@@ -31,10 +32,14 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
 
 + (IMYThemeManager *)sharedIMYThemeManager
 {
-    static dispatch_once_t singleton;
-    dispatch_once(&singleton, ^{
-        _sharedIMYThemeManager = [[self alloc] init];
-    });
+    if(_sharedIMYThemeManager == nil)
+    {
+        static dispatch_once_t singleton;
+        dispatch_once(&singleton, ^{
+            _sharedIMYThemeManager = [self alloc];
+            _sharedIMYThemeManager = [_sharedIMYThemeManager init];
+        });
+    }
     return _sharedIMYThemeManager;
 }
 
@@ -44,12 +49,27 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
     if (self)
     {
         self.colorDict = [[NSMutableDictionary alloc] init];
+        self.configFileNames = [NSMutableArray array];
+        
         self.observers = [NSHashTable weakObjectsHashTable];
         Home_Path = NSHomeDirectory();
         Main_Bundle_Path = [[NSBundle mainBundle] resourcePath];
+        
         self.themePath = [[[NSUserDefaults standardUserDefaults] stringForKey:IMY_ThemePath_Key] imy_fullPath];
         self.defaultThemeColorDict = [[NSMutableDictionary alloc] init];
-        NSString *themeConfigFilePath = [[NSBundle mainBundle] pathForResource:IMY_CONFIG_NAME ofType:nil];
+        
+        [self addConfigFileName:@"config.json"];
+    }
+
+    return self;
+}
+-(void)addConfigFileName:(NSString *)configName
+{
+    if([configName isKindOfClass:[NSString class]] && configName.length)
+    {
+        [_configFileNames addObject:configName];
+        
+        NSString *themeConfigFilePath = [[NSBundle mainBundle] pathForResource:configName ofType:nil];
         NSData *jsonData = [[NSData alloc] initWithContentsOfFile:themeConfigFilePath];
         if (jsonData)
         {
@@ -59,29 +79,27 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
                 _defaultThemeColorDict[key] = [UIColor imy_colorWithHexString:obj];
             }];
         }
+        
+        [self resetThemeValues];
     }
-
-    return self;
 }
-
-
 - (NSString *)imageResourcePathForKey:(NSString *)key
 {
-    return [self resourcePathForKey:key];
+    return [self resourcePathForKey:key loadMain:YES];
 }
 
-- (NSString *)resourcePathForKey:(NSString *)key
+///如果主题路径没找到 是否去 主路径上找
+- (NSString *)resourcePathForKey:(NSString *)key loadMain:(BOOL)loadMain
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *resourcePath = [_themePath stringByAppendingPathComponent:key];
     BOOL fileExist = [fileManager fileExistsAtPath:resourcePath];
-    if (!fileExist)
+    if (!fileExist && loadMain)
     {
         resourcePath = [Main_Bundle_Path stringByAppendingPathComponent:key];
     }
     return resourcePath;
 }
-
 
 - (UIColor *)colorForKey:(NSString *)key
 {
@@ -100,25 +118,33 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
     [[IMYThemeImageCache sharedIMYThemeImageCache] clear];
     [[NSUserDefaults standardUserDefaults] setObject:themePath forKey:IMY_ThemePath_Key];
     [[NSUserDefaults standardUserDefaults] synchronize];
+   
     [self resetThemeValues];
-    [self themeDidChanged];
 }
 
 
 - (void)resetThemeValues
 {
     [self.colorDict removeAllObjects];
-    NSString *themeConfigFilePath = [self resourcePathForKey:IMY_CONFIG_NAME];
-    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:themeConfigFilePath];
-    if (!jsonData)
+    
+    for (NSString* configName in _configFileNames)
     {
-        return;
+        NSString *themeConfigFilePath = [self resourcePathForKey:configName loadMain:NO];
+        NSData *jsonData = [[NSData alloc] initWithContentsOfFile:themeConfigFilePath];
+        if (!jsonData)
+        {
+            break;
+        }
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+        NSDictionary *colors = dict[@"color"];
+        [colors enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            _colorDict[key] = [UIColor imy_colorWithHexString:obj];
+        }];
     }
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
-    NSDictionary *colors = dict[@"color"];
-    [colors enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        _colorDict[key] = [UIColor imy_colorWithHexString:obj];
-    }];
+    
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(themeDidChanged) object:nil];
+    [self performSelectorOnMainThread:@selector(themeDidChanged) withObject:nil waitUntilDone:NO modes:@[NSRunLoopCommonModes]];
 }
 
 - (void)addThemeChangeObserver:(id)object
@@ -133,14 +159,12 @@ static IMYThemeManager *_sharedIMYThemeManager = nil;
 - (void)themeDidChanged
 {
     [NSObject imy_invoke];
-    SEL sel = NSSelectorFromString(@"imy_themeChanged");
+    
+    SEL sel = @selector(themeDidChanged);
     [_observers.allObjects bk_each:^(id obj) {
         if ([obj respondsToSelector:sel])
         {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            [obj performSelector:sel];
-#pragma clang diagnostic pop
+            [obj themeDidChanged];
         }
     }];
 }

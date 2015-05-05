@@ -115,6 +115,7 @@
 		2CE3D43F1AC8F68E00E8B399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CE3D4401AC8F68E00E8B399 /* IMY_ThemeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMY_ThemeTests.m; sourceTree = "<group>"; };
 		2CE3D44B1AC8F84D00E8B399 /* theme2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = theme2.bundle; sourceTree = "<group>"; };
+		362D61911AE7409D000D77A6 /* IMYThemeColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMYThemeColorMacros.h; sourceTree = "<group>"; };
 		B26E74AB06A4A0E24BF5D82F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3146F7BBCE0EC616D216450 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F2A31AB1AC90ED5F8A4EC0A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +156,6 @@
 				22F63B9E8A68DA3B3479C891 /* UIColor+IMY_Theme.h */,
 				22F63177478756B574410C23 /* UIImageView+IMY_Theme.m */,
 				22F6398F09B4FB5996449BC0 /* UIColor+IMY_Theme.m */,
-				22F6308BF5186FE3C15288FA /* IMYThemeConfig.h */,
 				22F630341A5FBB652C285F1D /* UIImage+IMY_Theme.h */,
 				22F63829CA7F060D1C27D267 /* UIButton+IMY_Theme.m */,
 				22F633E925A749EA53942292 /* IMYSetImageProtocol.h */,
@@ -166,6 +166,8 @@
 				22F639A20219AB38FD361F53 /* NSString+IMY_Theme.h */,
 				22F63B249C479368C83D284F /* UINavigationBar+IMY_Theme.m */,
 				22F636101B5B76A6A741476A /* UINavigationBar+IMY_Theme.h */,
+				22F6308BF5186FE3C15288FA /* IMYThemeConfig.h */,
+				362D61911AE7409D000D77A6 /* IMYThemeColorMacros.h */,
 			);
 			path = ThemeSupport;
 			sourceTree = "<group>";

@@ -1,6 +1,4 @@
 
-#define IMY_CONFIG_NAME @"config.json"
-
 #import "IMYInvocation.h"
 #import "IMYThemeImageCache.h"
 #import "IMYThemeManager.h"

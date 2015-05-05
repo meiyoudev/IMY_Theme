@@ -27,14 +27,14 @@
     //获取资源的路径，如果皮肤包内没有的话，就用mainBundle里面的
     NSString *imagePath = [[IMYThemeManager sharedIMYThemeManager] imageResourcePathForKey:key];
     //从缓存里面先拿，拿不到再去读
-    UIImage *image = [[IMYThemeImageCache sharedIMYThemeImageCache] objectForKey:key];
+    UIImage *image = [[IMYThemeImageCache sharedIMYThemeImageCache] objectForKey:imagePath];
     if (!image)
     {
         image = [[UIImage alloc] initWithContentsOfFile:imagePath];
     }
     if (usingCache)
     {
-//        [[IMYThemeImageCache sharedIMYThemeImageCache] setObject:image forKey:key];
+        [[IMYThemeImageCache sharedIMYThemeImageCache] setObject:image forKey:imagePath];
     }
     return image;
 }

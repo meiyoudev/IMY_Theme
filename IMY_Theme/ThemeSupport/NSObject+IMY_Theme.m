@@ -51,7 +51,12 @@ static NSHashTable *invocationHashTable = nil;
 
 - (void)addInvocationWithBlock:(NSInvocation *(^)(void))block andCMD:(SEL)cmd forState:(NSInteger)state key:(NSString *)key
 {
-    if (block && [self.imyInvocation shouldAddInvocation:state andCMD:cmd key:key])
+    if (key == nil)
+    {
+        ///当key 为nil 时候  移除已加入的 invocation
+        [self.imyInvocation removeAddInvocationForState:state andCMD:cmd];
+    }
+    else if (block && [self.imyInvocation shouldAddInvocation:state andCMD:cmd key:key])
     {
         NSInvocation *invocation = block();
         if (invocation)
